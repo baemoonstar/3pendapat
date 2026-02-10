@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>🗣️ Menyampaikan Pendapat – Bahasa Indonesia Kelas 3</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet"/>
+<style>
+/* ===================== RESET & ROOT ===================== */
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+:root{
+  --green:#16a34a;--green-l:#22c55e;--green-ll:#dcfce7;
+  --yellow:#f59e0b;--yellow-l:#fbbf24;--yellow-ll:#fef3c7;
+  --blue:#1d4ed8;--blue-l:#3b82f6;--blue-ll:#dbeafe;
+  --purple:#7c3aed;--purple-l:#a855f7;--purple-ll:#ede9fe;
+  --red:#dc2626;--red-l:#ef4444;--red-ll:#fee2e2;
+  --orange:#c2410c;--orange-l:#f97316;--orange-ll:#ffedd5;
+  --dark:#14532d;--bg:#f0fdf4;
+}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--dark);overflow-x:hidden;min-height:100vh;}
+
+/* ===================== NAVBAR ===================== */
+nav{
+  position:sticky;top:0;z-index:9999;
+  background:linear-gradient(135deg,#14532d,#166534);
+  padding:.55rem 1.2rem;
+  box-shadow:0 4px 24px rgba(0,0,0,.3);
+}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap;}
+.nav-brand{font-family:'Fredoka One',cursive;color:#fff;font-size:1.1rem;display:flex;align-items:center;gap:.35rem;white-space:nowrap;}
+.nav-brand em{color:#fbbf24;font-style:normal;}
+.nav-tabs{display:flex;gap:.25rem;flex-wrap:wrap;}
+.ntab{
+  background:rgba(255,255,255,.13);border:none;color:#fff;
+  padding:.38rem .85rem;border-radius:30px;
+  font-family:'Nunito',sans-serif;font-weight:700;font-size:.75rem;
+  cursor:pointer;transition:.2s;
+}
+.ntab:hover,.ntab.on{background:#fbbf24;color:#14532d;}
+
+/* ===================== HERO ===================== */
+.hero{
+  background:linear-gradient(140deg,#14532d 0%,#166534 50%,#15803d 100%);
+  padding:3.5rem 1.5rem 5.5rem;text-align:center;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;bottom:-2px;left:0;right:0;height:60px;
+  background:var(--bg);clip-path:ellipse(55% 100% at 50% 100%);
+}
+.h-bubbles{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+.h-bubbles span{
+  position:absolute;border-radius:50%;opacity:.08;
+  background:var(--green-l);animation:rise 8s infinite ease-in;
+}
+.h-bubbles span:nth-child(1){width:60px;height:60px;left:10%;animation-delay:0s;}
+.h-bubbles span:nth-child(2){width:40px;height:40px;left:30%;animation-delay:2s;}
+.h-bubbles span:nth-child(3){width:80px;height:80px;left:55%;animation-delay:4s;}
+.h-bubbles span:nth-child(4){width:30px;height:30px;left:75%;animation-delay:1s;}
+.h-bubbles span:nth-child(5){width:50px;height:50px;left:88%;animation-delay:3s;}
+@keyframes rise{0%{transform:translateY(100vh) scale(0);}100%{transform:translateY(-200px) scale(1);opacity:0;}}
+.hero-emoji{font-size:5.5rem;display:block;position:relative;z-index:1;animation:float 3s ease-in-out infinite;margin-bottom:.8rem;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+.hero h1{font-family:'Fredoka One',cursive;font-size:clamp(2rem,5.5vw,3.2rem);color:#fff;position:relative;z-index:1;text-shadow:0 3px 12px rgba(0,0,0,.3);}
+.hero-sub{color:#bbf7d0;font-weight:700;font-size:.95rem;margin:.5rem 0 1.2rem;position:relative;z-index:1;}
+.hero-chips{display:flex;justify-content:center;flex-wrap:wrap;gap:.5rem;position:relative;z-index:1;}
+.chip{background:rgba(255,255,255,.15);backdrop-filter:blur(6px);color:#fff;padding:.38rem .9rem;border-radius:30px;font-weight:800;font-size:.75rem;border:1px solid rgba(255,255,255,.25);}
+.chip.gold{background:rgba(251,191,36,.25);border-color:#fbbf24;color:#fef9c3;}
+
+/* ===================== SECTIONS ===================== */
+.sec{display:none;max-width:1100px;margin:0 auto;padding:2.5rem 1.2rem;}
+.sec.on{display:block;}
+
+.sec-head{
+  background:linear-gradient(135deg,var(--green),#166534);
+  border-radius:18px;padding:1.5rem 2rem;margin-bottom:2rem;color:#fff;
+  display:flex;align-items:center;gap:1rem;
+  box-shadow:0 6px 24px rgba(22,163,74,.3);
+}
+.sec-head-icon{font-size:2.5rem;}
+.sec-head h2{font-family:'Fredoka One',cursive;font-size:1.6rem;}
+.sec-head p{font-size:.88rem;opacity:.85;margin-top:.2rem;}
+
+/* ===================== CARDS ===================== */
+.card{
+  background:var(--card,#fff);border-radius:18px;padding:1.6rem;margin-bottom:1.3rem;
+  box-shadow:0 3px 16px rgba(0,0,0,.07);
+  border-top:5px solid var(--green);
+  position:relative;overflow:hidden;
+}
+.card::before{content:'';position:absolute;top:-40px;right:-40px;width:120px;height:120px;border-radius:50%;background:rgba(34,197,94,.05);}
+.card.blue{border-top-color:var(--blue-l);}
+.card.yellow{border-top-color:var(--yellow-l);}
+.card.purple{border-top-color:var(--purple-l);}
+.card.red{border-top-color:var(--red-l);}
+.card.orange{border-top-color:var(--orange-l);}
+.card h3{font-family:'Fredoka One',cursive;font-size:1.25rem;color:var(--green);margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem;}
+.card.blue h3{color:var(--blue);}
+.card.yellow h3{color:#92400e;}
+.card.purple h3{color:var(--purple);}
+.card.red h3{color:var(--red);}
+.card.orange h3{color:var(--orange);}
+
+/* ===================== HIGHLIGHT BOXES ===================== */
+.hbox{border-radius:14px;padding:1.1rem 1.3rem;margin:.8rem 0;}
+.hbox.green{background:var(--green-ll);border-left:4px solid var(--green-l);}
+.hbox.yellow{background:var(--yellow-ll);border-left:4px solid var(--yellow-l);}
+.hbox.blue{background:var(--blue-ll);border-left:4px solid var(--blue-l);}
+.hbox.purple{background:var(--purple-ll);border-left:4px solid var(--purple-l);}
+.hbox.red{background:var(--red-ll);border-left:4px solid var(--red-l);}
+.hbox p{font-size:.9rem;line-height:1.6;}
+.hbox strong{font-weight:800;}
+
+/* ===================== DEF GRID ===================== */
+.def-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;}
+@media(max-width:540px){.def-grid{grid-template-columns:1fr;}}
+.def-card{border-radius:16px;padding:1.3rem;text-align:center;}
+.def-card.green{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:2px solid #86efac;}
+.def-card.orange{background:linear-gradient(135deg,#fff7ed,#ffedd5);border:2px solid #fdba74;}
+.def-card .big-icon{font-size:2.8rem;margin-bottom:.6rem;}
+.def-card h4{font-family:'Fredoka One',cursive;font-size:1.1rem;margin-bottom:.5rem;}
+.def-card.green h4{color:#15803d;}
+.def-card.orange h4{color:#c2410c;}
+.def-card p{font-size:.85rem;color:#374151;line-height:1.5;}
+.def-card .tag{display:inline-block;margin-top:.6rem;padding:.25rem .7rem;border-radius:30px;font-size:.73rem;font-weight:800;}
+.def-card.green .tag{background:#16a34a;color:#fff;}
+.def-card.orange .tag{background:#f97316;color:#fff;}
+
+/* ===================== STEPS ===================== */
+.steps{list-style:none;counter-reset:s;}
+.steps li{
+  counter-increment:s;display:flex;gap:.9rem;align-items:flex-start;
+  padding:.85rem 1rem;margin-bottom:.5rem;
+  background:#fff;border-radius:12px;border:1px solid #e5e7eb;
+  transition:transform .2s,box-shadow .2s;
+}
+.steps li:hover{transform:translateX(5px);box-shadow:0 4px 14px rgba(0,0,0,.09);}
+.steps li::before{
+  content:counter(s);
+  background:linear-gradient(135deg,var(--green-l),var(--green));
+  color:#fff;font-weight:900;font-size:.9rem;
+  min-width:32px;height:32px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.steps li .s-main{font-weight:700;font-size:.9rem;line-height:1.5;}
+.steps li .s-note{font-size:.8rem;color:#6b7280;margin-top:.2rem;}
+
+/* ===================== CHAT DEMO ===================== */
+.chat{background:#f9fafb;border-radius:16px;padding:1.2rem;margin:1rem 0;}
+.crow{display:flex;align-items:flex-end;gap:.7rem;margin-bottom:.9rem;}
+.crow.r{flex-direction:row-reverse;}
+.cav{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;border:2px solid #86efac;background:#dcfce7;}
+.crow.r .cav{border-color:#93c5fd;background:#dbeafe;}
+.cbub{
+  background:#fff;border-radius:14px 14px 14px 4px;
+  padding:.7rem 1rem;max-width:68%;border:1px solid #e5e7eb;font-size:.88rem;line-height:1.5;
+}
+.crow.r .cbub{border-radius:14px 14px 4px 14px;background:#eff6ff;border-color:#bfdbfe;}
+.cname{font-size:.7rem;font-weight:800;color:#6b7280;margin-bottom:.25rem;}
+.crow.r .cname{text-align:right;}
+.ctag{display:inline-block;margin-top:.4rem;padding:.15rem .55rem;border-radius:20px;font-size:.68rem;font-weight:800;}
+.ctag.g{background:#16a34a;color:#fff;}
+.ctag.b{background:#3b82f6;color:#fff;}
+.ctag.o{background:#f97316;color:#fff;}
+
+/* ===================== COMPARE TABLE ===================== */
+.ctable{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem;}
+.ctable th{background:linear-gradient(135deg,var(--green),#166534);color:#fff;padding:.8rem 1rem;text-align:left;font-weight:800;}
+.ctable th:first-child{border-radius:12px 0 0 0;}
+.ctable th:last-child{border-radius:0 12px 0 0;}
+.ctable td{padding:.75rem 1rem;border-bottom:1px solid #e5e7eb;vertical-align:top;}
+.ctable tr:nth-child(even) td{background:#f9fafb;}
+.ctable tr:hover td{background:#f0fdf4;}
+
+/* ===================== KUNCI BOX ===================== */
+.key-box{
+  background:linear-gradient(135deg,#fef3c7,#fde68a);
+  border:2px solid #fbbf24;border-radius:14px;padding:1rem 1.2rem;margin:.8rem 0;
+  display:flex;gap:.8rem;align-items:flex-start;
+}
+.key-icon{font-size:1.8rem;flex-shrink:0;}
+.key-text{font-size:.88rem;line-height:1.6;}
+.key-text strong{font-weight:900;color:#92400e;}
+
+/* ===================== RUMUS BOX ===================== */
+.rumus{
+  background:linear-gradient(135deg,#14532d,#166534);
+  border-radius:16px;padding:1.3rem 1.5rem;color:#fff;margin:1rem 0;text-align:center;
+}
+.rumus p{font-size:.82rem;opacity:.8;margin-bottom:.5rem;}
+.rumus .formula{font-family:'Fredoka One',cursive;font-size:1.4rem;color:#fbbf24;}
+
+/* ====================================================
+   GAMES SECTION
+   ==================================================== */
+.games-intro{
+  background:linear-gradient(135deg,#14532d,#1a6b38);
+  border-radius:18px;padding:1.8rem;color:#fff;text-align:center;margin-bottom:2rem;
+}
+.games-intro h2{font-family:'Fredoka One',cursive;font-size:1.8rem;color:#fbbf24;}
+.games-intro p{font-size:.9rem;color:#bbf7d0;margin-top:.4rem;}
+.game-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem;}
+@media(max-width:600px){.game-grid{grid-template-columns:1fr;}}
+.game-card{
+  background:#fff;border-radius:18px;padding:1.5rem;text-align:center;
+  cursor:pointer;border:3px solid transparent;
+  transition:all .25s;box-shadow:0 3px 14px rgba(0,0,0,.09);
+}
+.game-card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,.15);}
+.game-card.g1{border-top-color:#22c55e;}
+.game-card.g2{border-top-color:#fbbf24;}
+.game-card.g3{border-top-color:#3b82f6;}
+.game-card.g4{border-top-color:#a855f7;}
+.game-card .gc-icon{font-size:2.8rem;margin-bottom:.6rem;}
+.game-card h4{font-family:'Fredoka One',cursive;font-size:1.1rem;margin-bottom:.3rem;}
+.game-card.g1 h4{color:#15803d;}
+.game-card.g2 h4{color:#92400e;}
+.game-card.g3 h4{color:#1d4ed8;}
+.game-card.g4 h4{color:#7c3aed;}
+.game-card p{font-size:.78rem;color:#6b7280;}
+.game-badge{display:inline-block;margin-top:.5rem;padding:.2rem .6rem;border-radius:20px;font-size:.7rem;font-weight:800;}
+.game-card.g1 .game-badge{background:#dcfce7;color:#15803d;}
+.game-card.g2 .game-badge{background:#fef3c7;color:#92400e;}
+.game-card.g3 .game-badge{background:#dbeafe;color:#1d4ed8;}
+.game-card.g4 .game-badge{background:#ede9fe;color:#7c3aed;}
+
+/* GAME WRAPPER */
+.gw{display:none;background:linear-gradient(135deg,#14532d,#166534);border-radius:22px;padding:1.8rem;margin-bottom:1.5rem;}
+.gw.on{display:block;animation:popIn .4s ease;}
+@keyframes popIn{from{transform:scale(.92);opacity:0;}to{transform:scale(1);opacity:1;}}
+.gw-head{text-align:center;margin-bottom:1.2rem;}
+.gw-head h3{font-family:'Fredoka One',cursive;color:#fbbf24;font-size:1.5rem;}
+.gw-head p{color:#bbf7d0;font-size:.82rem;margin-top:.25rem;}
+.gw-scorebar{
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(0,0,0,.2);border-radius:40px;
+  padding:.45rem 1.2rem;margin-bottom:1.3rem;flex-wrap:wrap;gap:.5rem;
+}
+.gw-scorebar span{color:#fff;font-weight:800;font-size:.82rem;}
+.gw-scorebar b{color:#fbbf24;}
+.back-btn{
+  background:rgba(255,255,255,.15);border:none;color:#fff;
+  padding:.4rem .9rem;border-radius:30px;font-family:'Nunito',sans-serif;
+  font-weight:700;font-size:.78rem;cursor:pointer;margin-bottom:1rem;
+  transition:.2s;
+}
+.back-btn:hover{background:rgba(255,255,255,.25);}
+
+/* ---- GAME 1: Pendapat atau Bukan? ---- */
+.g1-card{
+  background:#fff;border-radius:16px;padding:1.5rem;text-align:center;
+  min-height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  margin-bottom:1rem;box-shadow:0 4px 14px rgba(0,0,0,.15);
+  transition:transform .2s;
+}
+.g1-kalimat{font-size:1rem;font-weight:700;color:#14532d;line-height:1.55;margin-bottom:1rem;}
+.g1-btns{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap;}
+.gbtn{padding:.65rem 1.5rem;border:none;border-radius:40px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.9rem;cursor:pointer;transition:all .2s;}
+.gbtn:hover{transform:scale(1.07);}
+.gbtn.y{background:#22c55e;color:#fff;}
+.gbtn.n{background:#ef4444;color:#fff;}
+.gbtn:disabled{opacity:.45;cursor:default;transform:none;}
+.g1-fb{border-radius:12px;padding:.85rem;text-align:center;font-weight:800;font-size:.9rem;margin-top:.5rem;display:none;}
+.g1-fb.ok{background:#dcfce7;color:#15803d;border:2px solid #86efac;}
+.g1-fb.no{background:#fee2e2;color:#dc2626;border:2px solid #fca5a5;}
+.g1-prog{background:rgba(255,255,255,.15);border-radius:40px;height:10px;margin:.8rem 0;overflow:hidden;}
+.g1-fill{height:100%;background:linear-gradient(90deg,#22c55e,#fbbf24);border-radius:40px;transition:width .4s;}
+
+/* ---- GAME 2: Pasangkan! (Match) ---- */
+.match-area{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+@media(max-width:520px){.match-area{grid-template-columns:1fr;}}
+.match-col h4{font-family:'Fredoka One',cursive;color:#fbbf24;font-size:.95rem;text-align:center;margin-bottom:.7rem;}
+.match-item{
+  background:#fff;border-radius:11px;padding:.65rem .9rem;margin-bottom:.45rem;
+  font-weight:700;font-size:.83rem;color:#14532d;
+  border:2px solid #e5e7eb;cursor:pointer;transition:all .2s;
+  text-align:center;
+}
+.match-item:hover{border-color:#22c55e;background:#f0fdf4;transform:scale(1.02);}
+.match-item.selected{border-color:#fbbf24;background:#fef3c7;color:#92400e;}
+.match-item.matched-ok{border-color:#22c55e;background:#dcfce7;color:#15803d;cursor:default;pointer-events:none;}
+.match-item.matched-no{border-color:#ef4444;background:#fee2e2;color:#dc2626;animation:shake .4s;}
+@keyframes shake{0%,100%{transform:translateX(0);}25%{transform:translateX(-6px);}75%{transform:translateX(6px);}}
+.match-hint{color:#86efac;font-size:.78rem;font-weight:600;text-align:center;margin-bottom:.8rem;}
+
+/* ---- GAME 3: Kuis Cepat ---- */
+.quiz-box{background:#fff;border-radius:16px;padding:1.5rem;box-shadow:0 4px 14px rgba(0,0,0,.15);}
+.quiz-q{font-weight:800;font-size:.95rem;color:#14532d;margin-bottom:1.1rem;line-height:1.55;}
+.quiz-q .qnum{font-family:'Fredoka One',cursive;font-size:1.4rem;color:var(--green);margin-right:.4rem;}
+.quiz-opts{display:grid;grid-template-columns:1fr 1fr;gap:.55rem;}
+@media(max-width:480px){.quiz-opts{grid-template-columns:1fr;}}
+.qopt{
+  background:#f9fafb;border:2px solid #e5e7eb;border-radius:12px;
+  padding:.75rem 1rem;cursor:pointer;font-weight:700;font-size:.85rem;
+  transition:all .2s;text-align:left;
+}
+.qopt:hover{border-color:var(--blue-l);background:#eff6ff;transform:scale(1.02);}
+.qopt.ok{background:#dcfce7;border-color:#22c55e;color:#15803d;}
+.qopt.no{background:#fee2e2;border-color:#ef4444;color:#dc2626;}
+.qopt:disabled{cursor:default;}
+.quiz-explain{margin-top:.8rem;padding:.8rem;background:#fef3c7;border:1px solid #fcd34d;border-radius:10px;font-size:.83rem;font-weight:600;color:#92400e;display:none;}
+.quiz-nav{display:flex;gap:.6rem;justify-content:flex-end;margin-top:1rem;flex-wrap:wrap;}
+.qnav-btn{padding:.55rem 1.3rem;border:none;border-radius:30px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.85rem;cursor:pointer;transition:.2s;}
+.qnav-btn.next{background:#fbbf24;color:#14532d;}
+.qnav-btn.next:hover{background:#f59e0b;transform:scale(1.05);}
+.qnav-btn:disabled{opacity:.35;cursor:default;}
+.quiz-counter{color:#6b7280;font-size:.8rem;font-weight:700;display:flex;align-items:center;}
+
+/* ---- GAME 4: Susun Kalimat ---- */
+.susun-q{font-weight:800;color:#bbf7d0;font-size:.9rem;margin-bottom:.8rem;}
+.word-bank{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:.9rem;min-height:44px;}
+.wchip{
+  background:#fbbf24;color:#14532d;
+  padding:.38rem .85rem;border-radius:40px;font-weight:800;font-size:.82rem;
+  cursor:pointer;border:none;transition:all .2s;font-family:'Nunito',sans-serif;
+}
+.wchip:hover{background:#f59e0b;transform:scale(1.08);}
+.wchip.used{background:rgba(255,255,255,.15);color:rgba(255,255,255,.35);pointer-events:none;}
+.answer-area{
+  background:rgba(0,0,0,.25);border:2px dashed rgba(255,255,255,.3);
+  border-radius:12px;min-height:52px;padding:.5rem .8rem;
+  display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin-bottom:.8rem;
+}
+.achip{
+  background:#22c55e;color:#fff;padding:.38rem .85rem;border-radius:40px;
+  font-weight:800;font-size:.82rem;cursor:pointer;font-family:'Nunito',sans-serif;
+  transition:all .2s;border:none;
+}
+.achip:hover{background:#16a34a;transform:scale(1.08);}
+.s-actions{display:flex;gap:.6rem;flex-wrap:wrap;}
+.sbtn{padding:.55rem 1.3rem;border:none;border-radius:30px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.85rem;cursor:pointer;transition:.2s;}
+.sbtn.check{background:#fbbf24;color:#14532d;}
+.sbtn.check:hover{background:#f59e0b;transform:scale(1.05);}
+.sbtn.reset{background:rgba(255,255,255,.15);color:#fff;}
+.sbtn.reset:hover{background:rgba(255,255,255,.25);}
+.susun-fb{border-radius:12px;padding:.85rem;font-weight:800;text-align:center;margin-top:.7rem;display:none;}
+.susun-fb.ok{background:#dcfce7;color:#15803d;}
+.susun-fb.no{background:#fee2e2;color:#dc2626;}
+.susun-next{display:none;margin-top:.6rem;text-align:center;}
+.susun-next button{background:#fbbf24;color:#14532d;border:none;padding:.6rem 1.5rem;border-radius:30px;font-family:'Nunito',sans-serif;font-weight:800;cursor:pointer;font-size:.9rem;transition:.2s;}
+.susun-next button:hover{background:#f59e0b;transform:scale(1.05);}
+
+/* RESULT */
+.result-panel{
+  background:linear-gradient(135deg,#fbbf24,#f59e0b);
+  border-radius:20px;padding:2rem;text-align:center;
+  display:none;animation:popIn .5s ease;
+}
+.result-panel h3{font-family:'Fredoka One',cursive;font-size:2rem;color:#14532d;}
+.result-panel p{color:#15803d;font-weight:700;margin:.5rem 0;}
+.result-stars{font-size:2.8rem;letter-spacing:.3rem;margin:1rem 0;}
+.rbtn{background:#14532d;color:#fbbf24;border:none;padding:.75rem 2rem;border-radius:40px;font-family:'Nunito',sans-serif;font-weight:900;font-size:.95rem;cursor:pointer;transition:.2s;margin:.3rem;}
+.rbtn:hover{background:#166534;transform:scale(1.05);}
+
+/* FOOTER */
+footer{background:#14532d;color:#86efac;text-align:center;padding:1.5rem;font-size:.8rem;font-weight:600;margin-top:2rem;}
+
+/* ===================== SLIDESHOW ===================== */
+.slideshow-wrap{
+  background:#fff;border-radius:24px;
+  box-shadow:0 8px 40px rgba(0,0,0,.12);
+  overflow:hidden;margin-bottom:2rem;
+}
+
+/* Top bar */
+.slide-topbar{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem 1.5rem;background:#f9fafb;border-bottom:1px solid #e5e7eb;
+  flex-wrap:wrap;gap:.5rem;
+}
+.slide-label{font-weight:800;font-size:.82rem;color:#6b7280;}
+.slide-dots{display:flex;gap:.4rem;flex-wrap:wrap;}
+.sdot{
+  width:10px;height:10px;border-radius:50%;
+  background:#d1d5db;border:none;cursor:pointer;
+  transition:all .3s;padding:0;
+}
+.sdot.active{background:var(--green);transform:scale(1.3);}
+.sdot:hover{background:#9ca3af;}
+
+/* Progress bar */
+.slide-progress-bg{height:5px;background:#e5e7eb;}
+.slide-progress-fill{height:100%;background:linear-gradient(90deg,var(--green-l),var(--yellow-l));transition:width .4s ease;}
+
+/* Slides container: overflow hidden, slides in a row */
+.slides-container{
+  position:relative;overflow:hidden;
+}
+.slide{
+  display:none;
+  animation:slideIn .35s cubic-bezier(.4,0,.2,1);
+}
+.slide.active{display:block;}
+.slide.slide-out-left{animation:slideOutLeft .3s cubic-bezier(.4,0,.2,1) forwards;}
+.slide.slide-in-right{animation:slideInRight .35s cubic-bezier(.4,0,.2,1);}
+.slide.slide-out-right{animation:slideOutRight .3s cubic-bezier(.4,0,.2,1) forwards;}
+.slide.slide-in-left{animation:slideInLeft .35s cubic-bezier(.4,0,.2,1);}
+
+@keyframes slideInRight{from{transform:translateX(60px);opacity:0;}to{transform:translateX(0);opacity:1;}}
+@keyframes slideOutLeft{from{transform:translateX(0);opacity:1;}to{transform:translateX(-60px);opacity:0;}}
+@keyframes slideInLeft{from{transform:translateX(-60px);opacity:0;}to{transform:translateX(0);opacity:1;}}
+@keyframes slideOutRight{from{transform:translateX(0);opacity:1;}to{transform:translateX(60px);opacity:0;}}
+
+.slide-inner{
+  padding:2rem 1.8rem 1.5rem;
+  max-height:72vh;overflow-y:auto;
+}
+@media(max-width:600px){.slide-inner{padding:1.2rem 1rem 1rem;max-height:65vh;}}
+
+/* Slide content pieces */
+.slide-tag{
+  display:inline-block;padding:.3rem .9rem;border-radius:30px;
+  font-size:.75rem;font-weight:800;margin-bottom:.8rem;
+}
+.green-tag{background:#dcfce7;color:#15803d;}
+.blue-tag{background:#dbeafe;color:#1d4ed8;}
+.yellow-tag{background:#fef3c7;color:#92400e;}
+.purple-tag{background:#ede9fe;color:#7c3aed;}
+.orange-tag{background:#ffedd5;color:#c2410c;}
+
+.slide-title{font-family:'Fredoka One',cursive;font-size:clamp(1.3rem,3.5vw,1.8rem);color:var(--dark);margin-bottom:.8rem;line-height:1.2;}
+.slide-body{font-size:.92rem;line-height:1.7;margin-bottom:.9rem;color:#374151;}
+.slide-hint{text-align:center;color:#9ca3af;font-size:.85rem;margin-top:1.2rem;font-weight:600;}
+
+/* Slide 1 special styles */
+.slide-hero-icon{font-size:4rem;text-align:center;animation:float 3s ease-in-out infinite;display:block;margin-bottom:.6rem;}
+.slide-intro-text{font-size:.95rem;line-height:1.7;text-align:center;color:#374151;margin-bottom:1.2rem;}
+.slide-highlights-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.6rem;margin-bottom:1rem;}
+.sh-item{display:flex;align-items:center;gap:.5rem;padding:.6rem .9rem;border-radius:12px;font-weight:700;font-size:.82rem;}
+.sh-item.green{background:#dcfce7;color:#15803d;}
+.sh-item.blue{background:#dbeafe;color:#1d4ed8;}
+.sh-item.yellow{background:#fef3c7;color:#92400e;}
+.sh-item.purple{background:#ede9fe;color:#7c3aed;}
+.sh-item.orange{background:#ffedd5;color:#c2410c;}
+.sh-icon{font-size:1.1rem;}
+
+/* Rangkuman cards */
+.sum-card{border-radius:14px;padding:1rem;border:2px solid transparent;}
+.sum-card .sum-icon{font-size:1.8rem;margin-bottom:.3rem;}
+.sum-card .sum-title{font-family:'Fredoka One',cursive;font-size:1rem;margin-bottom:.3rem;}
+.sum-card p{font-size:.82rem;line-height:1.5;color:#374151;}
+.green-sum{background:#f0fdf4;border-color:#86efac;}.green-sum .sum-title{color:#15803d;}
+.blue-sum{background:#eff6ff;border-color:#93c5fd;}.blue-sum .sum-title{color:#1d4ed8;}
+.yellow-sum{background:#fffbeb;border-color:#fcd34d;}.yellow-sum .sum-title{color:#92400e;}
+.orange-sum{background:#fff7ed;border-color:#fdba74;}.orange-sum .sum-title{color:#c2410c;}
+
+/* Finish box */
+.slide-finish-box{
+  background:linear-gradient(135deg,#14532d,#166534);
+  border-radius:18px;padding:1.5rem;text-align:center;
+  margin-top:1.2rem;
+}
+.goto-games-btn{
+  background:#fbbf24;color:#14532d;border:none;
+  padding:.75rem 2rem;border-radius:40px;
+  font-family:'Nunito',sans-serif;font-weight:900;font-size:1rem;
+  cursor:pointer;transition:.2s;
+}
+.goto-games-btn:hover{background:#f59e0b;transform:scale(1.05);}
+
+/* Nav buttons */
+.slide-nav{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 1.5rem;background:#f9fafb;border-top:1px solid #e5e7eb;
+  gap:.5rem;
+}
+.snav-btn{
+  padding:.65rem 1.4rem;border:none;border-radius:40px;
+  font-family:'Nunito',sans-serif;font-weight:800;font-size:.9rem;
+  cursor:pointer;transition:all .2s;
+}
+.snav-btn.prev{background:#e5e7eb;color:#374151;}
+.snav-btn.prev:hover{background:#d1d5db;transform:translateX(-3px);}
+.snav-btn.next{background:linear-gradient(135deg,var(--green-l),var(--green));color:#fff;box-shadow:0 4px 14px rgba(34,197,94,.35);}
+.snav-btn.next:hover{transform:translateX(3px);box-shadow:0 6px 20px rgba(34,197,94,.45);}
+.snav-btn:disabled{opacity:.35;cursor:default;transform:none !important;box-shadow:none !important;}
+.slide-counter{font-weight:800;font-size:.88rem;color:#6b7280;}
+
+/* SCROLL TO TOP */
+.stt{position:fixed;bottom:1.5rem;right:1.5rem;width:44px;height:44px;border-radius:50%;background:var(--green);color:#fff;border:none;font-size:1.1rem;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25);transition:.2s;display:none;z-index:888;}
+.stt:hover{background:#15803d;transform:translateY(-3px);}
+.stt.show{display:flex;align-items:center;justify-content:center;}
+
+/* TOOLTIP */
+.tip{position:relative;cursor:help;display:inline-block;border-bottom:2px dashed var(--green-l);font-weight:800;}
+.tip::after{content:attr(data-tip);position:absolute;bottom:130%;left:50%;transform:translateX(-50%);background:#14532d;color:#fff;padding:.45rem .8rem;border-radius:8px;font-size:.75rem;white-space:nowrap;pointer-events:none;opacity:0;transition:.2s;z-index:99;max-width:220px;white-space:normal;text-align:center;}
+.tip:hover::after{opacity:1;}
+
+/* COIN ANIMATION */
+@keyframes coinPop{0%{transform:scale(0) rotate(0deg);opacity:0;}60%{transform:scale(1.2) rotate(180deg);opacity:1;}100%{transform:scale(1) rotate(360deg);opacity:1;}}
+.coin{display:inline-block;animation:coinPop .5s ease forwards;}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">🗣️ <em>Menyampaikan Pendapat</em></div>
+    <div class="nav-tabs">
+      <button class="ntab on" onclick="showSec('materi',this)">📖 Materi</button>
+      <button class="ntab" onclick="showSec('games',this)">🎮 Games</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="h-bubbles"><span></span><span></span><span></span><span></span><span></span></div>
+  <span class="hero-emoji">🗣️</span>
+  <h1>Menyampaikan Pendapat</h1>
+  <p class="hero-sub">Bahasa Indonesia · Kelas 3 SD · Semester II 2025/26</p>
+  <div class="hero-chips">
+    <span class="chip">📖 5 Sub-Materi</span>
+    <span class="chip gold">🎮 4 Games Seru</span>
+    <span class="chip">🧠 Belajar Sambil Bermain</span>
+    <span class="chip">✨ SD Islam Tahfizh CQ</span>
+  </div>
+</div>
+
+<!-- ==================== MATERI SECTION (SLIDESHOW) ==================== -->
+<div class="sec on" id="sec-materi">
+
+  <!-- SLIDE SHELL -->
+  <div class="slideshow-wrap">
+
+    <!-- TOP BAR -->
+    <div class="slide-topbar">
+      <div class="slide-label" id="slide-label">Slide 1 dari 6</div>
+      <div class="slide-dots" id="slide-dots"></div>
+    </div>
+
+    <!-- PROGRESS BAR -->
+    <div class="slide-progress-bg">
+      <div class="slide-progress-fill" id="slide-progress-fill"></div>
+    </div>
+
+    <!-- SLIDES CONTAINER -->
+    <div class="slides-container" id="slides-container">
+
+      <!-- SLIDE 1: Intro -->
+      <div class="slide" data-index="0">
+        <div class="slide-inner">
+          <div class="slide-hero-icon">🗣️</div>
+          <div class="slide-tag green-tag">Materi III · Bahasa Indonesia Kelas 3</div>
+          <h2 class="slide-title">Menyampaikan Pendapat</h2>
+          <p class="slide-intro-text">Setiap orang berhak punya pendapat. Tapi bagaimana cara menyampaikannya dengan <strong>baik, santun, dan tepat</strong>?</p>
+          <div class="slide-highlights-row">
+            <div class="sh-item green">
+              <span class="sh-icon">💬</span>
+              <span>Apa itu Pendapat?</span>
+            </div>
+            <div class="sh-item blue">
+              <span class="sh-icon">✅</span>
+              <span>Cara yang Baik</span>
+            </div>
+            <div class="sh-item yellow">
+              <span class="sh-icon">🧮</span>
+              <span>Rumus Pendapat</span>
+            </div>
+            <div class="sh-item purple">
+              <span class="sh-icon">🔄</span>
+              <span>Pendapat vs Tanggapan</span>
+            </div>
+            <div class="sh-item orange">
+              <span class="sh-icon">🔍</span>
+              <span>Kritik, Saran, Solusi</span>
+            </div>
+          </div>
+          <p class="slide-hint">👇 Tekan <strong>Lanjut</strong> untuk mulai belajar!</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: Apa itu Pendapat? -->
+      <div class="slide" data-index="1">
+        <div class="slide-inner">
+          <div class="slide-tag green-tag">Slide 1 · Pengertian</div>
+          <h2 class="slide-title">💬 Apa Itu Pendapat?</h2>
+          <p class="slide-body">Setiap orang berhak memiliki <strong>pendapat</strong>. Pendapat adalah <strong>pikiran atau ide yang kita miliki tentang suatu hal.</strong></p>
+          <div class="def-grid">
+            <div class="def-card green">
+              <div class="big-icon">💡</div>
+              <h4>Pendapat</h4>
+              <p>Pikiran atau ide <strong>pribadi</strong> tentang sesuatu. Belum tentu sama antar orang.</p>
+              <span class="tag">Bersifat Pribadi</span>
+            </div>
+            <div class="def-card orange">
+              <div class="big-icon">↩️</div>
+              <h4>Tanggapan</h4>
+              <p>Respon atau reaksi kita terhadap sesuatu yang kita lihat, baca, atau dengar.</p>
+              <span class="tag" style="background:#f97316;color:#fff;">Merespons Hal Lain</span>
+            </div>
+          </div>
+          <div class="key-box">
+            <span class="key-icon">🔑</span>
+            <div class="key-text">
+              <strong>Ingat perbedaannya!</strong><br/>
+              Pendapat = kamu yang <em>memulai</em> menyampaikan ide.<br/>
+              Tanggapan = kamu <em>merespons</em> ide orang lain.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: 4 Cara -->
+      <div class="slide" data-index="2">
+        <div class="slide-inner">
+          <div class="slide-tag blue-tag">Slide 2 · Cara Menyampaikan</div>
+          <h2 class="slide-title">✅ 4 Cara Menyampaikan Pendapat yang Baik</h2>
+          <p class="slide-body">Agar pendapat kita didengar dan dipahami, perhatikan <strong>4 hal ini:</strong></p>
+          <ul class="steps">
+            <li>
+              <div>
+                <div class="s-main">🗣️ <span style="color:#1d4ed8">Gunakan bahasa yang santun</span></div>
+                <div class="s-note">Tidak pakai kata kasar. Gunakan sapaan: "teman-teman", "Bapak/Ibu", atau "kakak".</div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div class="s-main">🔊 <span style="color:#1d4ed8">Bersuara jelas dan cukup keras</span></div>
+                <div class="s-note">Tidak terlalu pelan (tidak terdengar) dan tidak berteriak.</div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div class="s-main">💡 <span style="color:#1d4ed8">Sampaikan alasan yang sesuai</span></div>
+                <div class="s-note">Jelaskan <em>mengapa</em> kamu punya pendapat itu. Alasan harus masuk akal.</div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <div class="s-main">👂 <span style="color:#1d4ed8">Hargai pendapat orang lain</span></div>
+                <div class="s-note">Dengarkan dengan baik. Jangan memotong pembicaraan!</div>
+              </div>
+            </li>
+          </ul>
+          <div class="hbox red">
+            <p>❌ <strong>Jangan lakukan ini:</strong> Memotong pembicaraan, berteriak, atau menyampaikan pendapat tanpa alasan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: Rumus -->
+      <div class="slide" data-index="3">
+        <div class="slide-inner">
+          <div class="slide-tag yellow-tag">Slide 3 · Rumus Pendapat</div>
+          <h2 class="slide-title">🧮 Rumus Pendapat yang Lengkap</h2>
+          <p class="slide-body">Pendapat yang baik harus punya <strong>2 bagian penting:</strong></p>
+          <div class="rumus">
+            <p>Pendapat Lengkap =</p>
+            <div class="formula">Pernyataan Pendapat + Alasan yang Jelas</div>
+          </div>
+          <div class="hbox green" style="margin-top:1rem;">
+            <p>✅ <strong>Contoh BAGUS:</strong><br/>
+            <em>"<span class="tip" data-tip="Bagian pernyataan pendapat">Menurut saya, memelihara kucing itu menyenangkan</span> <span class="tip" data-tip="Bagian alasan">karena kucing lucu, bisa jadi teman bermain, dan membantu mengusir tikus.</span>"</em></p>
+          </div>
+          <div class="hbox red">
+            <p>❌ <strong>Contoh KURANG BAGUS:</strong><br/>
+            <em>"Bermain di luar itu menyenangkan."</em><br/>
+            → Tidak ada kata penanda & tidak ada alasan!</p>
+          </div>
+          <div class="hbox yellow">
+            <p>💛 <strong>Kata penanda pendapat:</strong> "Menurut saya...", "Saya berpendapat...", "Saya pikir...", "Menurutku..."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 5: Pendapat vs Tanggapan -->
+      <div class="slide" data-index="4">
+        <div class="slide-inner">
+          <div class="slide-tag purple-tag">Slide 4 · Pendapat vs Tanggapan</div>
+          <h2 class="slide-title">🔄 Pendapat vs Tanggapan</h2>
+          <p class="slide-body">Perhatikan percakapan Rani dan Dodi berikut:</p>
+          <div class="chat">
+            <div class="crow">
+              <div class="cav">👧</div>
+              <div>
+                <div class="cname">Rani</div>
+                <div class="cbub">"Menurutku, kita harus mengadakan kerja bakti membersihkan kelas setiap Jumat."<br/><span class="ctag g">💬 Pendapat</span></div>
+              </div>
+            </div>
+            <div class="crow r">
+              <div class="cav">👦</div>
+              <div>
+                <div class="cname">Dodi</div>
+                <div class="cbub">"Aku setuju sekali. Kelas kita pasti jadi lebih rapi dan bersih!"<br/><span class="ctag b">↩️ Tanggapan</span></div>
+              </div>
+            </div>
+          </div>
+          <table class="ctable" style="margin-top:1rem;">
+            <thead><tr><th>Aspek</th><th>💬 Pendapat</th><th>↩️ Tanggapan</th></tr></thead>
+            <tbody>
+              <tr><td><b>Pengertian</b></td><td>Pikiran pribadi tentang suatu hal</td><td>Respons terhadap hal yang sudah ada</td></tr>
+              <tr><td><b>Tujuan</b></td><td>Menyampaikan apa yang dipikirkan</td><td>Memberi respons, kritik, atau saran</td></tr>
+              <tr><td><b>Contoh kata</b></td><td>"Menurut saya...", "Saya pikir..."</td><td>"Saya setuju...", "Saya tidak setuju karena..."</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SLIDE 6: Kritik Saran Solusi -->
+      <div class="slide" data-index="5">
+        <div class="slide-inner">
+          <div class="slide-tag orange-tag">Slide 5 · Kritik, Saran & Solusi</div>
+          <h2 class="slide-title">🔍 Kritik, Saran, dan Solusi</h2>
+          <p class="slide-body">Saat menanggapi situasi, ada <strong>3 jenis kalimat</strong> yang bisa kamu pakai:</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.8rem;margin:1rem 0;">
+            <div style="background:#fee2e2;border-radius:14px;padding:1rem;text-align:center;">
+              <div style="font-size:2.2rem;margin-bottom:.4rem;">🚨</div>
+              <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#dc2626;margin-bottom:.4rem;">Kritik</div>
+              <p style="font-size:.78rem;color:#374151;margin-bottom:.5rem;">Tunjukkan hal yang <strong>kurang baik</strong></p>
+              <div style="background:#dc2626;color:#fff;border-radius:8px;font-size:.7rem;font-weight:800;padding:.3rem .5rem;">"Lingkungan ini tidak sehat karena sampah berserakan"</div>
+            </div>
+            <div style="background:#fef3c7;border-radius:14px;padding:1rem;text-align:center;">
+              <div style="font-size:2.2rem;margin-bottom:.4rem;">💡</div>
+              <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#92400e;margin-bottom:.4rem;">Saran</div>
+              <p style="font-size:.78rem;color:#374151;margin-bottom:.5rem;">Beri ide agar jadi <strong>lebih baik</strong></p>
+              <div style="background:#f59e0b;color:#fff;border-radius:8px;font-size:.7rem;font-weight:800;padding:.3rem .5rem;">"Sebaiknya kita menjaga kebersihan lingkungan"</div>
+            </div>
+            <div style="background:#f0fdf4;border-radius:14px;padding:1rem;text-align:center;">
+              <div style="font-size:2.2rem;margin-bottom:.4rem;">🔧</div>
+              <div style="font-family:'Fredoka One',cursive;font-size:1rem;color:#15803d;margin-bottom:.4rem;">Solusi</div>
+              <p style="font-size:.78rem;color:#374151;margin-bottom:.5rem;">Beri <strong>langkah nyata</strong> untuk selesaikan masalah</p>
+              <div style="background:#22c55e;color:#fff;border-radius:8px;font-size:.7rem;font-weight:800;padding:.3rem .5rem;">"Warga bisa bekerja sama membersihkan lingkungan"</div>
+            </div>
+          </div>
+          <div class="key-box">
+            <span class="key-icon">💡</span>
+            <div class="key-text"><strong>Tips ujian:</strong> Saat diminta menanggapi gambar, coba tulis <em>semua 3 hal</em>: kritik → saran → solusi!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 7: Rangkuman -->
+      <div class="slide" data-index="6">
+        <div class="slide-inner">
+          <div class="slide-tag" style="background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#14532d;">🏁 Rangkuman</div>
+          <h2 class="slide-title" style="color:#14532d;">📋 Rangkuman Materi</h2>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin-top:1rem;">
+            <div class="sum-card green-sum">
+              <div class="sum-icon">💬</div>
+              <div class="sum-title">Pendapat</div>
+              <p>Pikiran/ide pribadi. Pakai: "Menurut saya..." + alasan.</p>
+            </div>
+            <div class="sum-card blue-sum">
+              <div class="sum-icon">↩️</div>
+              <div class="sum-title">Tanggapan</div>
+              <p>Respons terhadap pendapat orang lain. Bisa setuju/tidak + alasan.</p>
+            </div>
+            <div class="sum-card yellow-sum">
+              <div class="sum-icon">✅</div>
+              <div class="sum-title">Cara yang Baik</div>
+              <p>Santun, suara jelas, ada alasan, hargai orang lain.</p>
+            </div>
+            <div class="sum-card orange-sum">
+              <div class="sum-icon">🔍</div>
+              <div class="sum-title">Kritik-Saran-Solusi</div>
+              <p>Tunjukkan masalah → beri saran → beri langkah nyata.</p>
+            </div>
+          </div>
+          <div class="slide-finish-box">
+            <div style="font-size:3rem;margin-bottom:.5rem;">🎉</div>
+            <p style="font-family:'Fredoka One',cursive;font-size:1.3rem;color:#14532d;margin-bottom:.3rem;">Materi Selesai!</p>
+            <p style="font-size:.88rem;color:#166534;margin-bottom:1rem;">Kamu sudah pelajari semua materinya. Sekarang saatnya uji kemampuan!</p>
+            <button class="goto-games-btn" onclick="showSec('games',document.querySelectorAll('.ntab')[1])">🎮 Main Games Sekarang! →</button>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end slides-container -->
+
+    <!-- NAV BUTTONS -->
+    <div class="slide-nav">
+      <button class="snav-btn prev" id="slide-prev" onclick="changeSlide(-1)">← Kembali</button>
+      <span class="slide-counter" id="slide-counter">1 / 7</span>
+      <button class="snav-btn next" id="slide-next" onclick="changeSlide(1)">Lanjut →</button>
+    </div>
+
+  </div><!-- end slideshow-wrap -->
+
+</div><!-- end sec-materi -->
+
+<!-- ==================== GAMES SECTION ==================== -->
+<div class="sec" id="sec-games">
+
+  <div class="games-intro">
+    <h2>🎮 Arena Games!</h2>
+    <p>Pilih game-mu dan buktikan kamu sudah paham materinya!</p>
+  </div>
+
+  <!-- Game Selector -->
+  <div class="game-grid" id="game-grid">
+    <div class="game-card g1" onclick="openGame(1)">
+      <div class="gc-icon">🤔</div>
+      <h4>Pendapat atau Bukan?</h4>
+      <p>Tentukan apakah kalimat itu termasuk pendapat atau bukan!</p>
+      <span class="game-badge">10 Soal Seru</span>
+    </div>
+    <div class="game-card g2" onclick="openGame(2)">
+      <div class="gc-icon">🧩</div>
+      <h4>Pasangkan!</h4>
+      <p>Cocokkan kalimat dengan jenisnya: pendapat, tanggapan, kritik, atau saran!</p>
+      <span class="game-badge">8 Pasangan</span>
+    </div>
+    <div class="game-card g3" onclick="openGame(3)">
+      <div class="gc-icon">⚡</div>
+      <h4>Kuis Kilat</h4>
+      <p>Jawab soal pilihan ganda secepat mungkin! Ada soal yang bikin mikir keras!</p>
+      <span class="game-badge">8 Soal Pilihan Ganda</span>
+    </div>
+    <div class="game-card g4" onclick="openGame(4)">
+      <div class="gc-icon">🔤</div>
+      <h4>Susun Kalimat</h4>
+      <p>Susun kata-kata acak menjadi kalimat pendapat yang lengkap dan benar!</p>
+      <span class="game-badge">5 Tantangan</span>
+    </div>
+  </div>
+
+  <!-- ===== GAME 1: Pendapat atau Bukan? ===== -->
+  <div class="gw" id="gw1">
+    <button class="back-btn" onclick="closeGame(1)">← Pilih Game Lain</button>
+    <div class="gw-head">
+      <h3>🤔 Pendapat atau Bukan?</h3>
+      <p>Baca kalimat di bawah. Klik PENDAPAT jika termasuk pendapat, klik BUKAN jika bukan pendapat!</p>
+    </div>
+    <div class="gw-scorebar">
+      <span>Soal: <b id="g1-cur">1</b>/10</span>
+      <span>✅ Benar: <b id="g1-ok">0</b></span>
+      <span>❌ Salah: <b id="g1-no">0</b></span>
+      <span>🏆 Skor: <b id="g1-score">0</b></span>
+    </div>
+    <div class="g1-prog"><div class="g1-fill" id="g1-fill" style="width:10%"></div></div>
+    <div class="g1-card">
+      <div class="g1-kalimat" id="g1-text">Loading...</div>
+      <div class="g1-btns">
+        <button class="gbtn y" id="g1-ya" onclick="answerG1(true)">💬 PENDAPAT</button>
+        <button class="gbtn n" id="g1-tdk" onclick="answerG1(false)">❌ BUKAN</button>
+      </div>
+    </div>
+    <div class="g1-fb" id="g1-fb"></div>
+    <div class="result-panel" id="g1-result">
+      <h3>🎉 Selesai!</h3>
+      <div class="result-stars" id="g1-stars"></div>
+      <p id="g1-result-msg"></p>
+      <button class="rbtn" onclick="restartGame(1)">🔄 Main Lagi</button>
+      <button class="rbtn" onclick="closeGame(1)">🎮 Game Lain</button>
+    </div>
+  </div>
+
+  <!-- ===== GAME 2: Pasangkan! ===== -->
+  <div class="gw" id="gw2">
+    <button class="back-btn" onclick="closeGame(2)">← Pilih Game Lain</button>
+    <div class="gw-head">
+      <h3>🧩 Pasangkan!</h3>
+      <p>Klik satu kalimat di kiri, lalu klik jenisnya di kanan. Cocokkan semua dengan benar!</p>
+    </div>
+    <div class="gw-scorebar">
+      <span>✅ Cocok: <b id="g2-ok">0</b>/8</span>
+      <span>❌ Salah: <b id="g2-no">0</b></span>
+      <span>🏆 Skor: <b id="g2-score">0</b></span>
+    </div>
+    <p class="match-hint" id="g2-hint">Klik kalimat di KIRI dulu, kemudian klik jenisnya di KANAN!</p>
+    <div class="match-area">
+      <div>
+        <h4>📝 Kalimat</h4>
+        <div id="g2-left"></div>
+      </div>
+      <div>
+        <h4>🏷️ Jenis</h4>
+        <div id="g2-right"></div>
+      </div>
+    </div>
+    <div class="result-panel" id="g2-result">
+      <h3>🎉 Semua Terpasang!</h3>
+      <div class="result-stars" id="g2-stars"></div>
+      <p id="g2-result-msg"></p>
+      <button class="rbtn" onclick="restartGame(2)">🔄 Main Lagi</button>
+      <button class="rbtn" onclick="closeGame(2)">🎮 Game Lain</button>
+    </div>
+  </div>
+
+  <!-- ===== GAME 3: Kuis Kilat ===== -->
+  <div class="gw" id="gw3">
+    <button class="back-btn" onclick="closeGame(3)">← Pilih Game Lain</button>
+    <div class="gw-head">
+      <h3>⚡ Kuis Kilat</h3>
+      <p>Pilih jawaban yang paling tepat! Ada soal yang butuh mikir keras 🧠</p>
+    </div>
+    <div class="gw-scorebar">
+      <span>Soal: <b id="g3-cur">1</b>/8</span>
+      <span>✅ Benar: <b id="g3-ok">0</b></span>
+      <span>🏆 Skor: <b id="g3-score">0</b></span>
+    </div>
+    <div class="quiz-box" id="g3-box">
+      <div class="quiz-q" id="g3-q"></div>
+      <div class="quiz-opts" id="g3-opts"></div>
+      <div class="quiz-explain" id="g3-explain"></div>
+      <div class="quiz-nav">
+        <span class="quiz-counter" id="g3-counter"></span>
+        <button class="qnav-btn next" id="g3-next" onclick="nextQ3()" disabled>Lanjut →</button>
+      </div>
+    </div>
+    <div class="result-panel" id="g3-result">
+      <h3>⚡ Kuis Selesai!</h3>
+      <div class="result-stars" id="g3-stars"></div>
+      <p id="g3-result-msg"></p>
+      <button class="rbtn" onclick="restartGame(3)">🔄 Main Lagi</button>
+      <button class="rbtn" onclick="closeGame(3)">🎮 Game Lain</button>
+    </div>
+  </div>
+
+  <!-- ===== GAME 4: Susun Kalimat ===== -->
+  <div class="gw" id="gw4">
+    <button class="back-btn" onclick="closeGame(4)">← Pilih Game Lain</button>
+    <div class="gw-head">
+      <h3>🔤 Susun Kalimat Pendapat!</h3>
+      <p>Klik kata-kata di bawah untuk menyusun kalimat pendapat yang benar!</p>
+    </div>
+    <div class="gw-scorebar">
+      <span>Soal: <b id="g4-cur">1</b>/5</span>
+      <span>✅ Benar: <b id="g4-ok">0</b></span>
+      <span>🏆 Skor: <b id="g4-score">0</b></span>
+    </div>
+    <div class="susun-q" id="g4-q"></div>
+    <p style="color:#86efac;font-size:.78rem;margin-bottom:.4rem;">🏦 Klik kata untuk menyusun:</p>
+    <div class="word-bank" id="g4-bank"></div>
+    <p style="color:#86efac;font-size:.78rem;margin-bottom:.4rem;">✍️ Kalimatmu (klik kata untuk hapus):</p>
+    <div class="answer-area" id="g4-answer"></div>
+    <div class="s-actions">
+      <button class="sbtn check" onclick="checkG4()">✅ Cek Jawabanku!</button>
+      <button class="sbtn reset" onclick="resetG4()">🔄 Ulangi</button>
+    </div>
+    <div class="susun-fb" id="g4-fb"></div>
+    <div class="susun-next" id="g4-next">
+      <button onclick="nextG4()">Soal Berikutnya →</button>
+    </div>
+    <div class="result-panel" id="g4-result">
+      <h3>🔤 Kalimat Tersusun!</h3>
+      <div class="result-stars" id="g4-stars"></div>
+      <p id="g4-result-msg"></p>
+      <button class="rbtn" onclick="restartGame(4)">🔄 Main Lagi</button>
+      <button class="rbtn" onclick="closeGame(4)">🎮 Game Lain</button>
+    </div>
+  </div>
+
+</div><!-- end sec-games -->
+
+<button class="stt" id="stt" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<footer>🌿 SD Islam Tahfizh Cahaya Qur'an · Bahasa Indonesia Kelas 3 · Materi III: Menyampaikan Pendapat · Sem II 2025/26</footer>
+
+<script>
+// ============================================================
+//  NAV & SECTION TOGGLE
+// ============================================================
+function showSec(name, btn) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'));
+  document.querySelectorAll('.ntab').forEach(b => b.classList.remove('on'));
+  document.getElementById('sec-' + name).classList.add('on');
+  if (btn) btn.classList.add('on');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', () => {
+  document.getElementById('stt').classList.toggle('show', window.scrollY > 300);
+});
+
+// ============================================================
+//  GAME HELPERS
+// ============================================================
+function openGame(n) {
+  document.getElementById('game-grid').style.display = 'none';
+  document.querySelectorAll('.gw').forEach(g => g.classList.remove('on'));
+  document.getElementById('gw' + n).classList.add('on');
+  if (n === 1) initG1();
+  if (n === 2) initG2();
+  if (n === 3) initG3();
+  if (n === 4) initG4();
+}
+function closeGame(n) {
+  document.getElementById('gw' + n).classList.remove('on');
+  document.getElementById('game-grid').style.display = 'grid';
+}
+function restartGame(n) {
+  document.getElementById('g' + n + '-result').style.display = 'none';
+  if (n === 1) initG1();
+  if (n === 2) initG2();
+  if (n === 3) initG3();
+  if (n === 4) initG4();
+}
+function getStars(pct) {
+  if (pct >= 90) return '⭐⭐⭐';
+  if (pct >= 60) return '⭐⭐';
+  return '⭐';
+}
+function getMsg(pct) {
+  if (pct >= 90) return '🏆 Luar biasa! Kamu sudah paham betul materinya!';
+  if (pct >= 60) return '👍 Bagus! Coba lagi untuk hasil lebih sempurna!';
+  return '💪 Yuk baca lagi materinya, kamu pasti bisa!';
+}
+
+// ============================================================
+//  GAME 1 – Pendapat atau Bukan?
+// ============================================================
+const g1Data = [
+  { k: '"Menurut saya, memelihara kucing itu menyenangkan karena kucing lucu dan bisa jadi teman bermain."', ans: true, why: '✅ Ini PENDAPAT karena ada kata "Menurut saya" dan disertai alasan!' },
+  { k: '"Harimau Sumatra hidup di hutan Pulau Sumatra."', ans: false, why: '❌ Ini FAKTA, bukan pendapat. Fakta bisa dibuktikan kebenarannya!' },
+  { k: '"Saya pikir, bermain di luar lebih seru karena kita bisa bergerak bebas dan menghirup udara segar."', ans: true, why: '✅ Ini PENDAPAT. Ada kata "Saya pikir" + alasan yang jelas!' },
+  { k: '"Hari ini cuaca sangat panas."', ans: false, why: '❌ Ini FAKTA/PERNYATAAN biasa, bukan pendapat. Tidak ada kata penanda pendapat.' },
+  { k: '"Menurutku, kelas kita harus diadakan kerja bakti setiap Jumat agar bersih dan nyaman."', ans: true, why: '✅ PENDAPAT! Ada "Menurutku" + alasan yang sesuai.' },
+  { k: '"Kucing biasanya hidup di rumah."', ans: false, why: '❌ Ini pernyataan umum, bukan pendapat. Tidak ada kata penanda pendapat.' },
+  { k: '"Saya berpendapat bahwa menanam pohon di sekolah sangat penting karena membuat udara sejuk."', ans: true, why: '✅ PENDAPAT lengkap! Ada kata "Saya berpendapat" + alasan!' },
+  { k: '"Burung merpati membuat sarang di tempat yang tinggi."', ans: false, why: '❌ Ini FAKTA tentang burung merpati, bukan pendapat seseorang.' },
+  { k: '"Aku setuju kita menjaga lingkungan karena lingkungan yang bersih membuat kita sehat."', ans: true, why: '✅ Ini TANGGAPAN berupa pendapat. Ada "Aku setuju" + alasan. Termasuk jenis pendapat!' },
+  { k: '"Ikan hidup di air dan bernapas menggunakan insang."', ans: false, why: '❌ Ini FAKTA ilmiah, bukan pendapat.' },
+];
+let g1Idx = 0, g1Score = 0, g1Ok = 0, g1No = 0;
+
+function initG1() {
+  g1Idx = 0; g1Score = 0; g1Ok = 0; g1No = 0;
+  document.getElementById('g1-ok').textContent = 0;
+  document.getElementById('g1-no').textContent = 0;
+  document.getElementById('g1-score').textContent = 0;
+  document.getElementById('g1-fb').style.display = 'none';
+  document.getElementById('g1-ya').disabled = false;
+  document.getElementById('g1-tdk').disabled = false;
+  renderG1();
+}
+function renderG1() {
+  if (g1Idx >= g1Data.length) { showG1Result(); return; }
+  const d = g1Data[g1Idx];
+  document.getElementById('g1-text').textContent = d.k;
+  document.getElementById('g1-cur').textContent = g1Idx + 1;
+  document.getElementById('g1-fill').style.width = ((g1Idx / g1Data.length) * 100) + '%';
+  document.getElementById('g1-fb').style.display = 'none';
+  document.getElementById('g1-ya').disabled = false;
+  document.getElementById('g1-tdk').disabled = false;
+}
+function answerG1(isPendapat) {
+  const d = g1Data[g1Idx];
+  const fb = document.getElementById('g1-fb');
+  document.getElementById('g1-ya').disabled = true;
+  document.getElementById('g1-tdk').disabled = true;
+  if (isPendapat === d.ans) {
+    g1Ok++; g1Score += 10;
+    fb.className = 'g1-fb ok';
+    fb.textContent = '🎉 Benar! ' + d.why;
+  } else {
+    g1No++;
+    fb.className = 'g1-fb no';
+    fb.textContent = '😅 Kurang tepat. ' + d.why;
+  }
+  fb.style.display = 'block';
+  document.getElementById('g1-ok').textContent = g1Ok;
+  document.getElementById('g1-no').textContent = g1No;
+  document.getElementById('g1-score').textContent = g1Score;
+  g1Idx++;
+  setTimeout(renderG1, 2000);
+}
+function showG1Result() {
+  document.getElementById('g1-fill').style.width = '100%';
+  const pct = (g1Ok / g1Data.length) * 100;
+  document.getElementById('g1-stars').textContent = getStars(pct);
+  document.getElementById('g1-result-msg').textContent = `Kamu benar ${g1Ok} dari ${g1Data.length} soal. ${getMsg(pct)}`;
+  document.getElementById('g1-result').style.display = 'block';
+}
+
+// ============================================================
+//  GAME 2 – Pasangkan!
+// ============================================================
+const g2Pairs = [
+  { id: 0, kalimat: '"Menurut saya, kita harus lebih banyak menanam pohon."', jenis: '💬 Pendapat' },
+  { id: 1, kalimat: '"Saya setuju kerja bakti diadakan tiap Jumat."', jenis: '↩️ Tanggapan' },
+  { id: 2, kalimat: '"Lingkungan di gambar itu kotor dan tidak sehat."', jenis: '🚨 Kritik' },
+  { id: 3, kalimat: '"Sebaiknya kita membuang sampah pada tempatnya."', jenis: '💡 Saran' },
+  { id: 4, kalimat: '"Saya pikir belajar di luar kelas itu menyenangkan."', jenis: '💬 Pendapat' },
+  { id: 5, kalimat: '"Aku tidak setuju karena alasannya kurang tepat."', jenis: '↩️ Tanggapan' },
+  { id: 6, kalimat: '"Tanaman di sini layu karena tidak pernah disiram."', jenis: '🚨 Kritik' },
+  { id: 7, kalimat: '"Hendaknya kita menyiram tanaman setiap pagi."', jenis: '💡 Saran' },
+];
+const g2Types = ['💬 Pendapat', '↩️ Tanggapan', '🚨 Kritik', '💡 Saran'];
+let g2Sel = null, g2Ok2 = 0, g2No2 = 0, g2Score2 = 0;
+let g2Matched = {};
+
+function shuffle(a) { return [...a].sort(() => Math.random() - .5); }
+
+function initG2() {
+  g2Sel = null; g2Ok2 = 0; g2No2 = 0; g2Score2 = 0; g2Matched = {};
+  document.getElementById('g2-ok').textContent = 0;
+  document.getElementById('g2-no').textContent = 0;
+  document.getElementById('g2-score').textContent = 0;
+  document.getElementById('g2-result').style.display = 'none';
+  document.getElementById('g2-hint').textContent = 'Klik kalimat di KIRI dulu, kemudian klik jenisnya di KANAN!';
+
+  const leftEl = document.getElementById('g2-left');
+  const rightEl = document.getElementById('g2-right');
+  leftEl.innerHTML = '';
+  rightEl.innerHTML = '';
+
+  shuffle(g2Pairs).forEach(p => {
+    const el = document.createElement('div');
+    el.className = 'match-item';
+    el.textContent = p.kalimat;
+    el.dataset.id = p.id;
+    el.onclick = function() { selectLeft(this, p.id); };
+    leftEl.appendChild(el);
+  });
+
+  // Right side: unique types shown multiple times
+  const rightItems = shuffle([...g2Pairs.map(p => p.jenis)]);
+  rightItems.forEach((j, i) => {
+    const el = document.createElement('div');
+    el.className = 'match-item';
+    el.textContent = j;
+    el.dataset.type = j;
+    el.dataset.ri = i;
+    el.onclick = function() { selectRight(this, j); };
+    rightEl.appendChild(el);
+  });
+}
+function selectLeft(el, id) {
+  if (g2Matched[id]) return;
+  document.querySelectorAll('#g2-left .match-item').forEach(e => e.classList.remove('selected'));
+  el.classList.add('selected');
+  g2Sel = { el, id };
+  document.getElementById('g2-hint').textContent = 'Sekarang klik jenis yang cocok di sebelah kanan!';
+}
+function selectRight(el, jenis) {
+  if (!g2Sel) { document.getElementById('g2-hint').textContent = 'Pilih kalimat di kiri dulu ya!'; return; }
+  if (el.classList.contains('matched-ok')) return;
+  const correct = g2Pairs.find(p => p.id === g2Sel.id).jenis;
+  // Save local references BEFORE nulling g2Sel
+  const selEl = g2Sel.el;
+  const selId = g2Sel.id;
+  g2Sel = null;
+  if (jenis === correct) {
+    g2Ok2++; g2Score2 += 15;
+    selEl.classList.remove('selected');
+    selEl.classList.add('matched-ok');
+    selEl.style.pointerEvents = 'none';
+    el.classList.add('matched-ok');
+    g2Matched[selId] = true;
+    document.getElementById('g2-hint').textContent = '🎉 Benar! Lanjut pasangkan yang lain!';
+  } else {
+    g2No2++;
+    selEl.classList.remove('selected');
+    selEl.classList.add('matched-no');
+    el.classList.add('matched-no');
+    setTimeout(() => { selEl.classList.remove('matched-no'); el.classList.remove('matched-no'); }, 600);
+    document.getElementById('g2-hint').textContent = '😅 Belum tepat! Coba lagi ya!';
+  }
+  document.getElementById('g2-ok').textContent = g2Ok2;
+  document.getElementById('g2-no').textContent = g2No2;
+  document.getElementById('g2-score').textContent = g2Score2;
+  if (g2Ok2 === g2Pairs.length) {
+    setTimeout(() => {
+      const pct = (g2Ok2 / (g2Ok2 + g2No2)) * 100;
+      document.getElementById('g2-stars').textContent = getStars(pct);
+      document.getElementById('g2-result-msg').textContent = `Semua terpasang! ${getMsg(pct)}`;
+      document.getElementById('g2-result').style.display = 'block';
+    }, 600);
+  }
+}
+
+// ============================================================
+//  GAME 3 – Kuis Kilat
+// ============================================================
+const g3Qs = [
+  {
+    q: 'Apa yang HARUS ada dalam sebuah pendapat yang baik?',
+    opts: ['Suara yang keras', 'Pernyataan + alasan yang jelas', 'Fakta yang bisa dibuktikan', 'Kalimat yang panjang'],
+    ans: 1, level: 'C2',
+    explain: '💡 Pendapat yang baik = pernyataan pendapat (seperti "Menurut saya...") + alasan yang jelas dan sesuai topik!'
+  },
+  {
+    q: 'Manakah contoh kata penanda pendapat yang benar?',
+    opts: ['"Jangan..."', '"Sebaiknya..."', '"Menurut saya..."', '"Fakta menunjukkan..."'],
+    ans: 2, level: 'C1',
+    explain: '💡 "Menurut saya..." adalah kata penanda pendapat. "Jangan" = larangan, "Sebaiknya" = saran.'
+  },
+  {
+    q: 'Dodi memotong pembicaraan Rani saat Rani sedang berbicara. Apa yang sebaiknya dilakukan Dodi?',
+    opts: ['Terus berbicara agar lebih cepat selesai', 'Berhenti dan mendengarkan Rani selesai bicara', 'Berbicara lebih keras dari Rani', 'Pergi meninggalkan Rani'],
+    ans: 1, level: 'C3',
+    explain: '💡 Menghargai pendapat orang lain berarti mendengarkan dengan baik dan tidak memotong pembicaraan!'
+  },
+  {
+    q: 'Perhatikan dua kalimat:\nA: "Bermain di luar menyenangkan."\nB: "Menurut saya, bermain di luar lebih seru karena kita bisa bergerak bebas."\nMana yang merupakan pendapat yang LEBIH BAIK?',
+    opts: ['Kalimat A karena lebih pendek', 'Kalimat B karena ada kata penanda dan alasan', 'Keduanya sama baiknya', 'Kalimat A karena lebih mudah dimengerti'],
+    ans: 1, level: 'C4 🔥',
+    explain: '💡 Kalimat B lebih baik karena menggunakan kata penanda pendapat ("Menurut saya") dan disertai alasan yang jelas!'
+  },
+  {
+    q: 'Rani ingin menanggapi pendapat Dodi tentang kerja bakti. Tanggapan mana yang paling baik?',
+    opts: ['"Salah kamu!"', '"Iya."', '"Saya setuju dengan Dodi karena kelas yang bersih membuat kita nyaman belajar."', '"Tidak mau komentar."'],
+    ans: 2, level: 'C3',
+    explain: '💡 Tanggapan yang baik: menyatakan setuju/tidak + memberikan alasan yang sesuai!'
+  },
+  {
+    q: 'Guru melihat halaman sekolah kotor. Ia ingin memberi tanggapan berupa kritik, saran, DAN solusi. Urutan yang BENAR adalah...',
+    opts: [
+      'Solusi → Saran → Kritik',
+      'Kritik (tunjuk masalah) → Saran (ide perbaikan) → Solusi (langkah nyata)',
+      'Saran → Solusi → Kritik',
+      'Tidak perlu urutan, sembarang saja'
+    ],
+    ans: 1, level: 'C4 🔥',
+    explain: '💡 Urutan yang logis: Dulu tunjukkan masalahnya (kritik), lalu beri ide (saran), lalu jelaskan cara melakukannya (solusi)!'
+  },
+  {
+    q: 'Budi berkata: "Bermain HP itu lebih seru dari baca buku." Siti berkata: "Aku tidak setuju. Buku lebih bermanfaat karena menambah pengetahuan." Siapa yang menyampaikan pendapat/tanggapan LEBIH BAIK?',
+    opts: [
+      'Budi, karena kalimatnya singkat',
+      'Siti, karena ada alasan yang jelas',
+      'Keduanya sama',
+      'Budi, karena lebih percaya diri'
+    ],
+    ans: 1, level: 'C5 🔥',
+    explain: '💡 Siti lebih baik! Ia menyatakan tidak setuju PLUS memberikan alasan yang logis dan sesuai.'
+  },
+  {
+    q: 'Mana kalimat pendapat yang PALING LENGKAP dan TERBAIK untuk disampaikan di depan kelas?',
+    opts: [
+      '"Pohon itu bagus."',
+      '"Jangan tebang pohon!"',
+      '"Menurut saya, kita perlu menanam lebih banyak pohon di sekolah karena pohon membuat udara bersih, memberikan keteduhan, dan memperindah lingkungan kita."',
+      '"Saya suka pohon."'
+    ],
+    ans: 2, level: 'C5 🔥',
+    explain: '💡 Pilihan C paling lengkap: ada kata penanda pendapat, ada 3 alasan berbeda, kalimat santun dan jelas!'
+  }
+];
+let g3Idx = 0, g3Ok3 = 0, g3Score3 = 0, g3Answered = false;
+
+function initG3() {
+  g3Idx = 0; g3Ok3 = 0; g3Score3 = 0;
+  document.getElementById('g3-ok').textContent = 0;
+  document.getElementById('g3-score').textContent = 0;
+  document.getElementById('g3-result').style.display = 'none';
+  document.getElementById('g3-box').style.display = 'block';
+  renderG3();
+}
+function renderG3() {
+  if (g3Idx >= g3Qs.length) { showG3Result(); return; }
+  g3Answered = false;
+  const q = g3Qs[g3Idx];
+  document.getElementById('g3-cur').textContent = g3Idx + 1;
+  const qEl = document.getElementById('g3-q');
+  qEl.innerHTML = `<span class="qnum">${g3Idx+1}.</span> ${q.q.replace(/\n/g,'<br/>')}`;
+  const optsEl = document.getElementById('g3-opts');
+  optsEl.innerHTML = '';
+  q.opts.forEach((o, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'qopt';
+    btn.textContent = ['A','B','C','D'][i] + '. ' + o;
+    btn.onclick = function() { answerG3(i, btn); };
+    optsEl.appendChild(btn);
+  });
+  document.getElementById('g3-explain').style.display = 'none';
+  document.getElementById('g3-next').disabled = true;
+  document.getElementById('g3-counter').textContent = `${g3Idx+1} / ${g3Qs.length}`;
+}
+function answerG3(i, btn) {
+  if (g3Answered) return;
+  g3Answered = true;
+  const q = g3Qs[g3Idx];
+  document.querySelectorAll('.qopt').forEach(b => b.disabled = true);
+  if (i === q.ans) {
+    btn.classList.add('ok');
+    g3Ok3++;
+    g3Score3 += g3Idx >= 5 ? 20 : 10;
+  } else {
+    btn.classList.add('no');
+    document.querySelectorAll('.qopt')[q.ans].classList.add('ok');
+  }
+  document.getElementById('g3-ok').textContent = g3Ok3;
+  document.getElementById('g3-score').textContent = g3Score3;
+  const ex = document.getElementById('g3-explain');
+  ex.textContent = q.explain;
+  ex.style.display = 'block';
+  document.getElementById('g3-next').disabled = false;
+}
+function nextQ3() {
+  g3Idx++;
+  renderG3();
+}
+function showG3Result() {
+  document.getElementById('g3-box').style.display = 'none';
+  const pct = (g3Ok3 / g3Qs.length) * 100;
+  document.getElementById('g3-stars').textContent = getStars(pct);
+  document.getElementById('g3-result-msg').textContent = `Benar ${g3Ok3} dari ${g3Qs.length} soal. Skor: ${g3Score3}! ${getMsg(pct)}`;
+  document.getElementById('g3-result').style.display = 'block';
+}
+
+// ============================================================
+//  GAME 4 – Susun Kalimat
+// ============================================================
+const g4Data = [
+  {
+    q: 'Susun kata-kata ini menjadi kalimat PENDAPAT yang benar:',
+    words: ['saya', 'Menurut', 'sangat', 'kucing', 'memelihara', 'menyenangkan'],
+    correct: ['Menurut', 'saya', 'memelihara', 'kucing', 'sangat', 'menyenangkan'],
+    hint: '💡 Ingat: kalimat pendapat dimulai dengan "Menurut saya..."'
+  },
+  {
+    q: 'Susun kata-kata ini menjadi kalimat PENDAPAT + ALASAN:',
+    words: ['kita', 'Saya', 'pohon', 'menanam', 'pikir', 'harus', 'lebih', 'banyak'],
+    correct: ['Saya', 'pikir', 'kita', 'harus', 'menanam', 'lebih', 'banyak', 'pohon'],
+    hint: '💡 Gunakan "Saya pikir" sebagai awalan pendapat!'
+  },
+  {
+    q: 'Susun menjadi kalimat TANGGAPAN yang baik:',
+    words: ['setuju', 'Aku', 'kelas', 'karena', 'bersih', 'jadi', 'sekali', 'akan'],
+    correct: ['Aku', 'setuju', 'sekali', 'karena', 'kelas', 'akan', 'jadi', 'bersih'],
+    hint: '💡 Tanggapan setuju dimulai dengan "Aku setuju..."'
+  },
+  {
+    q: 'Susun menjadi kalimat SARAN yang benar:',
+    words: ['membuang', 'tempatnya', 'sampah', 'kita', 'Sebaiknya', 'pada'],
+    correct: ['Sebaiknya', 'kita', 'membuang', 'sampah', 'pada', 'tempatnya'],
+    hint: '💡 Kalimat saran dimulai dengan "Sebaiknya..."'
+  },
+  {
+    q: 'Susun menjadi kalimat PENDAPAT yang paling lengkap:',
+    words: ['belajar', 'Menurutku', 'lebih', 'di', 'luar', 'menyenangkan', 'kelas'],
+    correct: ['Menurutku', 'belajar', 'di', 'luar', 'kelas', 'lebih', 'menyenangkan'],
+    hint: '💡 Gunakan "Menurutku" di awal kalimat pendapat!'
+  }
+];
+let g4Idx = 0, g4Ok4 = 0, g4Score4 = 0;
+let g4WordsState = [], g4Answer = [];
+
+function initG4() {
+  g4Idx = 0; g4Ok4 = 0; g4Score4 = 0;
+  document.getElementById('g4-ok').textContent = 0;
+  document.getElementById('g4-score').textContent = 0;
+  document.getElementById('g4-result').style.display = 'none';
+  renderG4();
+}
+function renderG4() {
+  if (g4Idx >= g4Data.length) { showG4Result(); return; }
+  const d = g4Data[g4Idx];
+  document.getElementById('g4-cur').textContent = g4Idx + 1;
+  document.getElementById('g4-q').textContent = d.q;
+  g4Answer = [];
+  g4WordsState = shuffle(d.words).map((w, i) => ({ w, i, used: false }));
+  renderG4Banks();
+  document.getElementById('g4-answer').innerHTML = '<span style="color:rgba(255,255,255,.3);font-size:.82rem;">Kalimatmu akan muncul di sini...</span>';
+  document.getElementById('g4-fb').style.display = 'none';
+  document.getElementById('g4-next').style.display = 'none';
+}
+function renderG4Banks() {
+  const bank = document.getElementById('g4-bank');
+  bank.innerHTML = '';
+  g4WordsState.forEach((item, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'wchip' + (item.used ? ' used' : '');
+    btn.textContent = item.w;
+    btn.onclick = function() { addWordG4(i); };
+    bank.appendChild(btn);
+  });
+}
+function addWordG4(i) {
+  if (g4WordsState[i].used) return;
+  g4WordsState[i].used = true;
+  g4Answer.push({ word: g4WordsState[i].w, bankIdx: i });
+  renderG4Banks();
+  renderG4Answer();
+}
+function renderG4Answer() {
+  const area = document.getElementById('g4-answer');
+  if (g4Answer.length === 0) {
+    area.innerHTML = '<span style="color:rgba(255,255,255,.3);font-size:.82rem;">Kalimatmu akan muncul di sini...</span>';
+    return;
+  }
+  area.innerHTML = '';
+  g4Answer.forEach((item, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'achip';
+    btn.textContent = item.word;
+    btn.onclick = function() { removeWordG4(i); };
+    area.appendChild(btn);
+  });
+}
+function removeWordG4(i) {
+  const item = g4Answer[i];
+  g4WordsState[item.bankIdx].used = false;
+  g4Answer.splice(i, 1);
+  renderG4Banks();
+  renderG4Answer();
+}
+function resetG4() {
+  g4Answer = [];
+  g4WordsState.forEach(w => w.used = false);
+  renderG4Banks();
+  renderG4Answer();
+  document.getElementById('g4-fb').style.display = 'none';
+  document.getElementById('g4-next').style.display = 'none';
+}
+function checkG4() {
+  const d = g4Data[g4Idx];
+  const fb = document.getElementById('g4-fb');
+  const answered = g4Answer.map(a => a.word);
+  if (answered.length === 0) { fb.className = 'susun-fb no'; fb.textContent = '⚠️ Susun kata-katanya dulu ya!'; fb.style.display = 'block'; return; }
+  const correct = JSON.stringify(answered) === JSON.stringify(d.correct);
+  fb.style.display = 'block';
+  if (correct) {
+    fb.className = 'susun-fb ok';
+    fb.textContent = '🎉 BENAR! Kalimatmu sudah tepat!';
+    g4Ok4++; g4Score4 += 20;
+    document.getElementById('g4-ok').textContent = g4Ok4;
+    document.getElementById('g4-score').textContent = g4Score4;
+    document.getElementById('g4-next').style.display = 'block';
+  } else {
+    fb.className = 'susun-fb no';
+    fb.innerHTML = `😅 Belum tepat! ${d.hint}<br/><span style="font-weight:600;font-size:.82rem;">Kalimat benar: <em>${d.correct.join(' ')}</em></span>`;
+    setTimeout(() => { document.getElementById('g4-next').style.display = 'block'; }, 1500);
+  }
+}
+function nextG4() {
+  g4Idx++;
+  renderG4();
+}
+function showG4Result() {
+  const pct = (g4Ok4 / g4Data.length) * 100;
+  document.getElementById('g4-stars').textContent = getStars(pct);
+  document.getElementById('g4-result-msg').textContent = `Kamu benar ${g4Ok4} dari ${g4Data.length} soal. Skor: ${g4Score4}! ${getMsg(pct)}`;
+  document.getElementById('g4-result').style.display = 'block';
+}
+
+// ============================================================
+//  SLIDESHOW
+// ============================================================
+const TOTAL_SLIDES = 7;
+let currentSlide = 0;
+
+function initSlideshow() {
+  // Build dots
+  const dotsEl = document.getElementById('slide-dots');
+  dotsEl.innerHTML = '';
+  for (let i = 0; i < TOTAL_SLIDES; i++) {
+    const d = document.createElement('button');
+    d.className = 'sdot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i+1));
+    d.onclick = () => goToSlide(i);
+    dotsEl.appendChild(d);
+  }
+  goToSlide(0, true);
+}
+
+function goToSlide(idx, instant) {
+  const slides = document.querySelectorAll('.slide');
+  const dir = idx > currentSlide ? 'forward' : 'back';
+
+  if (!instant && slides[currentSlide]) {
+    slides[currentSlide].classList.add(dir === 'forward' ? 'slide-out-left' : 'slide-out-right');
+    setTimeout(() => {
+      slides[currentSlide].classList.remove('active','slide-out-left','slide-out-right');
+      currentSlide = idx;
+      showCurrentSlide(slides, dir);
+    }, 280);
+  } else {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = idx;
+    showCurrentSlide(slides, dir, true);
+  }
+}
+
+function showCurrentSlide(slides, dir, instant) {
+  const s = slides[currentSlide];
+  s.classList.add('active');
+  if (!instant) s.classList.add(dir === 'forward' ? 'slide-in-right' : 'slide-in-left');
+  setTimeout(() => s.classList.remove('slide-in-right','slide-in-left'), 400);
+
+  // Update dots
+  document.querySelectorAll('.sdot').forEach((d,i) => d.classList.toggle('active', i === currentSlide));
+
+  // Update label & counter
+  document.getElementById('slide-label').textContent = `Slide ${currentSlide+1} dari ${TOTAL_SLIDES}`;
+  document.getElementById('slide-counter').textContent = `${currentSlide+1} / ${TOTAL_SLIDES}`;
+
+  // Progress bar
+  document.getElementById('slide-progress-fill').style.width = ((currentSlide+1)/TOTAL_SLIDES*100)+'%';
+
+  // Button states
+  document.getElementById('slide-prev').disabled = currentSlide === 0;
+  const nextBtn = document.getElementById('slide-next');
+  if (currentSlide === TOTAL_SLIDES - 1) {
+    nextBtn.textContent = '🎮 Main Games!';
+    nextBtn.onclick = () => showSec('games', document.querySelectorAll('.ntab')[1]);
+  } else {
+    nextBtn.textContent = 'Lanjut →';
+    nextBtn.onclick = () => changeSlide(1);
+  }
+
+  // Scroll to top of slide
+  const inner = s.querySelector('.slide-inner');
+  if (inner) inner.scrollTop = 0;
+  document.getElementById('sec-materi').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function changeSlide(dir) {
+  const next = currentSlide + dir;
+  if (next < 0 || next >= TOTAL_SLIDES) return;
+  goToSlide(next);
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', e => {
+  const materiActive = document.getElementById('sec-materi').classList.contains('on');
+  if (!materiActive) return;
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') changeSlide(1);
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') changeSlide(-1);
+});
+
+// ============================================================
+//  INIT
+// ============================================================
+showSec('materi', document.querySelector('.ntab'));
+initSlideshow();
+</script>
+</body>
+</html>
